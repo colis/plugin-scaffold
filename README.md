@@ -1,9 +1,7 @@
-10up Plugin Scaffold
+Pragmatic Plugin Scaffold
 =====================
 
-At 10up, we strive to provide digital products that yield a top-notch user experience. In order to improve both our efficiency and consistency, we need to standardize what we use and how we use it. This plugin scaffold allows us to share initial set up procedures to make sure all projects can get up and running as quickly as possible while closely adhering to 10up's high quality standards.
-
-<a href="http://10up.com/contact/"><img src="https://10updotcom-uploads.s3.amazonaws.com/uploads/2016/08/10up_github_banner-2.png" alt="Work with 10up, we create amazing websites and tools that make content management simple and fun using open source tools and platforms"></a>
+At Pragmatic, we strive to provide digital products that yield a top-notch user experience. In order to improve both our efficiency and consistency, we need to standardize what we use and how we use it. This plugin scaffold allows us to share initial set up procedures to make sure all projects can get up and running as quickly as possible while closely adhering to Pragmatic's high quality standards.
 
 ## Dependencies
 
@@ -14,7 +12,7 @@ At 10up, we strive to provide digital products that yield a top-notch user exper
 ## Getting Started
 
 ### Quick Start
-Install 10up's command line tool for scaffolding new projects. You can download it from the [Project Scaffold repository](https://github.com/10up/project-scaffold). Setting up a new plugin is as easy as running `create-10up plugin plugin-name-here` in the terminal!
+Install Pragmatic's command line tool for scaffolding new projects. You can download it from the [Project Scaffold repository](https://github.com/colis/project-scaffold). Setting up a new plugin is as easy as running `create-pragmatic plugin plugin-name-here` in the terminal!
 
 Browsersync requires a local development URL. This is currently set in the `package.json`, as `proxyUrl`.
 
@@ -80,7 +78,7 @@ In most cases `webpack.settings.js` is the main file which would change from pro
 
 ## Contributing
 
-We don't know everything! We welcome pull requests and spirited, but respectful, debates. Please contribute via [pull requests on GitHub](https://github.com/10up/plugin-scaffold/compare).
+We don't know everything! We welcome pull requests and spirited, but respectful, debates. Please contribute via [pull requests on GitHub](https://github.com/colis/plugin-scaffold/compare).
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b feature/my-new-feature`
