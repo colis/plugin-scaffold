@@ -1,6 +1,6 @@
 <?php
 
-namespace TenUpScaffold;
+namespace PragmaticScaffold;
 
 use PHPUnit_Framework_TestResult;
 use Text_Template;

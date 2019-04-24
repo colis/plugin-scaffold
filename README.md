@@ -36,10 +36,10 @@ The NPM commands will fail without these files present.
 
 - Do case-sensitive search/replace for the following:
 
-	- TenUpScaffold
-	- TENUP_SCAFFOLD
-	- tenup-scaffold
-	- tenup_scaffold
+	- PragmaticScaffold
+	- PRAGMATIC_SCAFFOLD
+	- pragmatic-scaffold
+	- pragmatic_scaffold
 
 - `cd` into the plugin folder
 - run `npm run start` to build the front-end assets

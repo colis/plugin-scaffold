@@ -1,5 +1,5 @@
 <?php
-namespace TenUpScaffold\Core;
+namespace PragmaticScaffold\Core;
 
 /**
  * This is a very basic test case to get things started. You should probably rename this and make
@@ -13,7 +13,7 @@ namespace TenUpScaffold\Core;
  *   - https://github.com/10up/wp_mock
  */
 
-use TenUpScaffold as Base;
+use PragmaticScaffold as Base;
 
 class Core_Tests extends Base\TestCase {
 
@@ -26,9 +26,9 @@ class Core_Tests extends Base\TestCase {
 	 */
 	public function test_setup() {
 		// Setup
-		\WP_Mock::expectActionAdded( 'init', 'TenUpScaffold\Core\i18n' );
-		\WP_Mock::expectActionAdded( 'init', 'TenUpScaffold\Core\init' );
-		\WP_Mock::expectAction( 'tenup_scaffold_loaded' );
+		\WP_Mock::expectActionAdded( 'init', 'PragmaticScaffold\Core\i18n' );
+		\WP_Mock::expectActionAdded( 'init', 'PragmaticScaffold\Core\init' );
+		\WP_Mock::expectAction( 'pragmatic_scaffold_loaded' );
 
 		// Act
 		setup();
@@ -47,10 +47,10 @@ class Core_Tests extends Base\TestCase {
 			'args' => array(),
 			'return' => 'en_US',
 		) );
-		\WP_Mock::onFilter( 'plugin_locale' )->with( 'en_US', 'tenup-scaffold' )->reply( 'en_US' );
+		\WP_Mock::onFilter( 'plugin_locale' )->with( 'en_US', 'pragmatic-scaffold' )->reply( 'en_US' );
 		\WP_Mock::userFunction( 'load_textdomain', array(
 			'times' => 1,
-			'args' => array( 'tenup-scaffold', 'lang_dir/tenup-scaffold/tenup-scaffold-en_US.mo' ),
+			'args' => array( 'pragmatic-scaffold', 'lang_dir/pragmatic-scaffold/pragmatic-scaffold-en_US.mo' ),
 		) );
 		\WP_Mock::userFunction( 'plugin_basename', array(
 			'times' => 1,
@@ -59,7 +59,7 @@ class Core_Tests extends Base\TestCase {
 		) );
 		\WP_Mock::userFunction( 'load_plugin_textdomain', array(
 			'times' => 1,
-			'args' => array( 'tenup-scaffold', false, 'path/languages/' ),
+			'args' => array( 'pragmatic-scaffold', false, 'path/languages/' ),
 		) );
 
 		// Act
@@ -74,7 +74,7 @@ class Core_Tests extends Base\TestCase {
 	 */
 	public function test_init() {
 		// Setup
-		\WP_Mock::expectAction( 'tenup_scaffold_init' );
+		\WP_Mock::expectAction( 'pragmatic_scaffold_init' );
 
 		// Act
 		init();

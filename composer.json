@@ -1,10 +1,10 @@
 {
-  "name": "10up/tenup-scaffold",
-  "description": "10up Scaffold",
+  "name": "pragmatic/pragmatic-scaffold",
+  "description": "Pragmatic Scaffold",
   "authors": [
     {
-      "name": "Author",
-      "email": "info@10up.com"
+      "name": "Pragmatic",
+      "email": "info@pragmatic.agency"
     }
   ],
   "require": {
@@ -12,7 +12,7 @@
   },
   "autoload": {
     "psr-4": {
-      "TenUpScaffold\\": "includes/classes/"
+      "PragmaticScaffold\\": "includes/classes/"
     }
   },
   "require-dev": {

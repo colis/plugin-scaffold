@@ -1,6 +1,6 @@
-=== 10up Scaffold ===
-Contributors:      10up
-Tags: 
+=== Pragmatic Scaffold ===
+Contributors:      Pragmatic
+Tags:
 Requires at least: 4.9
 Tested up to:      4.9
 Stable tag:        0.1.0
@@ -15,8 +15,8 @@ A brief description of the plugin.
 
 = Manual Installation =
 
-1. Upload the entire `/tenup-scaffold` directory to the `/wp-content/plugins/` directory.
-2. Activate 10up Scaffold through the 'Plugins' menu in WordPress.
+1. Upload the entire `/pragmatic-scaffold` directory to the `/wp-content/plugins/` directory.
+2. Activate Pragmatic Scaffold through the 'Plugins' menu in WordPress.
 
 == Frequently Asked Questions ==
 
