@@ -1,6 +1,6 @@
 <?php
 
-namespace PragmaticScaffold;
+namespace AmericaneagleScaffold;
 
 use PHPUnit\Framework\TestResult;
 use Text_Template;

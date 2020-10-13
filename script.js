@@ -1,3 +1,3 @@
 /**
- * Pragmatic Scaffold
+ * Americaneagle Scaffold
  */

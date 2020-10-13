@@ -51,7 +51,7 @@ module.exports = {
 	BrowserSyncConfig: {
 		host: 'localhost',
 		port: 3000,
-		proxy: 'http://pragmatic-scaffold.test',
+		proxy: 'http://americaneagle-scaffold.test',
 		open: false,
 		files: [
 			'**/*.php',

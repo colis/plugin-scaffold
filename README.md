@@ -1,6 +1,6 @@
-# 10up Plugin Scaffold
+# Americaneagle.com Plugin Scaffold
 
-> At Pragmatic, we strive to provide digital products that yield a top-notch user experience. In order to improve both our efficiency and consistency, we need to standardize what we use and how we use it. This plugin scaffold allows us to share initial set up procedures to make sure all projects can get up and running as quickly as possible while closely adhering to Pragmatic's high quality standards.
+> At Americaneagle.com, we strive to provide digital products that yield a top-notch user experience. In order to improve both our efficiency and consistency, we need to standardize what we use and how we use it. This plugin scaffold allows us to share initial set up procedures to make sure all projects can get up and running as quickly as possible while closely adhering to Americaneagle.com's high quality standards.
 
 [![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level)
 
@@ -13,7 +13,7 @@
 ## Getting Started
 
 ### Quick Start
-Install Pragmatic's command line tool for scaffolding new projects. You can download it from the [Project Scaffold repository](https://github.com/colis/project-scaffold). Setting up a new plugin is as easy as running `create-pragmatic plugin plugin-name-here` in the terminal!
+Install Americaneagle.com's command line tool for scaffolding new projects. You can download it from the [Project Scaffold repository](https://github.com/colis/project-scaffold). Setting up a new plugin is as easy as running `create-ae plugin plugin-name-here` in the terminal!
 
 Browsersync requires a local development URL. This is currently set in the `package.json`, as `proxyUrl`.
 
@@ -35,10 +35,10 @@ The NPM commands will fail without these files present.
 
 - Do case-sensitive search/replace for the following:
 
-	- PragmaticScaffold
-	- PRAGMATIC_SCAFFOLD
-	- pragmatic-scaffold
-	- pragmatic_scaffold
+	- AmericaneagleScaffold
+	- AMERICANEAGLE_SCAFFOLD
+	- americaneagle-scaffold
+	- americaneagle_scaffold
 
 - `cd` into the plugin folder
 - run `npm run start` to build the front-end assets
@@ -128,8 +128,8 @@ We don't know everything! We welcome pull requests and spirited, but respectful,
 
 ## Support Level
 
-**Active:** 10up is actively working on this, and we expect to continue work for the foreseeable future including keeping tested up to the most recent version of WordPress.  Bug reports, feature requests, questions, and pull requests are welcome.
+**Active:** Americaneagle.com is actively working on this, and we expect to continue work for the foreseeable future including keeping tested up to the most recent version of WordPress. Bug reports, feature requests, questions, and pull requests are welcome.
 
 ## Like what you see?
 
-<a href="http://10up.com/contact/"><img src="https://10updotcom-uploads.s3.amazonaws.com/uploads/2016/08/10up_github_banner-2.png" alt="Work with 10up, we create amazing websites and tools that make content management simple and fun using open source tools and platforms"></a>
+<a href="https://www.americaneagle.com/contact-us/"><img src="https://www.americaneagle.com/ResourcePackages/Talon/assets/dist/images/logo.jpg" width="400" alt="Work with us at Americaneagle.com"></a>

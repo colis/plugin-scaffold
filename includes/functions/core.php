@@ -2,10 +2,10 @@
 /**
  * Core plugin functionality.
  *
- * @package PragmaticScaffold
+ * @package AmericaneagleScaffold
  */
 
-namespace PragmaticScaffold\Core;
+namespace AmericaneagleScaffold\Core;
 
 use \WP_Error as WP_Error;
 
@@ -31,7 +31,7 @@ function setup() {
 	// Hook to allow async or defer on asset loading.
 	add_filter( 'script_loader_tag', $n( 'script_loader_tag' ), 10, 2 );
 
-	do_action( 'pragmatic_scaffold_loaded' );
+	do_action( 'americaneagle_scaffold_loaded' );
 }
 
 /**
@@ -40,9 +40,9 @@ function setup() {
  * @return void
  */
 function i18n() {
-	$locale = apply_filters( 'plugin_locale', get_locale(), 'pragmatic-scaffold' );
-	load_textdomain( 'pragmatic-scaffold', WP_LANG_DIR . '/pragmatic-scaffold/pragmatic-scaffold-' . $locale . '.mo' );
-	load_plugin_textdomain( 'pragmatic-scaffold', false, plugin_basename( PRAGMATIC_SCAFFOLD_PATH ) . '/languages/' );
+	$locale = apply_filters( 'plugin_locale', get_locale(), 'americaneagle-scaffold' );
+	load_textdomain( 'americaneagle-scaffold', WP_LANG_DIR . '/americaneagle-scaffold/americaneagle-scaffold-' . $locale . '.mo' );
+	load_plugin_textdomain( 'americaneagle-scaffold', false, plugin_basename( AMERICANEAGLE_SCAFFOLD_PATH ) . '/languages/' );
 }
 
 /**
@@ -51,7 +51,7 @@ function i18n() {
  * @return void
  */
 function init() {
-	do_action( 'pragmatic_scaffold_init' );
+	do_action( 'americaneagle_scaffold_init' );
 }
 
 /**
@@ -97,10 +97,10 @@ function get_enqueue_contexts() {
 function script_url( $script, $context ) {
 
 	if ( ! in_array( $context, get_enqueue_contexts(), true ) ) {
-		return new WP_Error( 'invalid_enqueue_context', 'Invalid $context specified in PragmaticScaffold script loader.' );
+		return new WP_Error( 'invalid_enqueue_context', 'Invalid $context specified in AmericaneagleScaffold script loader.' );
 	}
 
-	return PRAGMATIC_SCAFFOLD_URL . "dist/js/${script}.js";
+	return AMERICANEAGLE_SCAFFOLD_URL . "dist/js/${script}.js";
 
 }
 
@@ -115,10 +115,10 @@ function script_url( $script, $context ) {
 function style_url( $stylesheet, $context ) {
 
 	if ( ! in_array( $context, get_enqueue_contexts(), true ) ) {
-		return new WP_Error( 'invalid_enqueue_context', 'Invalid $context specified in PragmaticScaffold stylesheet loader.' );
+		return new WP_Error( 'invalid_enqueue_context', 'Invalid $context specified in AmericaneagleScaffold stylesheet loader.' );
 	}
 
-	return PRAGMATIC_SCAFFOLD_URL . "dist/css/${stylesheet}.css";
+	return AMERICANEAGLE_SCAFFOLD_URL . "dist/css/${stylesheet}.css";
 
 }
 
@@ -130,18 +130,18 @@ function style_url( $stylesheet, $context ) {
 function scripts() {
 
 	wp_enqueue_script(
-		'pragmatic_scaffold_shared',
+		'americaneagle_scaffold_shared',
 		script_url( 'shared', 'shared' ),
 		[],
-		PRAGMATIC_SCAFFOLD_VERSION,
+		AMERICANEAGLE_SCAFFOLD_VERSION,
 		true
 	);
 
 	wp_enqueue_script(
-		'pragmatic_scaffold_frontend',
+		'americaneagle_scaffold_frontend',
 		script_url( 'frontend', 'frontend' ),
 		[],
-		PRAGMATIC_SCAFFOLD_VERSION,
+		AMERICANEAGLE_SCAFFOLD_VERSION,
 		true
 	);
 
@@ -155,18 +155,18 @@ function scripts() {
 function admin_scripts() {
 
 	wp_enqueue_script(
-		'pragmatic_scaffold_shared',
+		'americaneagle_scaffold_shared',
 		script_url( 'shared', 'shared' ),
 		[],
-		PRAGMATIC_SCAFFOLD_VERSION,
+		AMERICANEAGLE_SCAFFOLD_VERSION,
 		true
 	);
 
 	wp_enqueue_script(
-		'pragmatic_scaffold_admin',
+		'americaneagle_scaffold_admin',
 		script_url( 'admin', 'admin' ),
 		[],
-		PRAGMATIC_SCAFFOLD_VERSION,
+		AMERICANEAGLE_SCAFFOLD_VERSION,
 		true
 	);
 
@@ -180,25 +180,25 @@ function admin_scripts() {
 function styles() {
 
 	wp_enqueue_style(
-		'pragmatic_scaffold_shared',
+		'americaneagle_scaffold_shared',
 		style_url( 'shared-style', 'shared' ),
 		[],
-		PRAGMATIC_SCAFFOLD_VERSION
+		AMERICANEAGLE_SCAFFOLD_VERSION
 	);
 
 	if ( is_admin() ) {
 		wp_enqueue_style(
-			'pragmatic_scaffold_admin',
+			'americaneagle_scaffold_admin',
 			style_url( 'admin-style', 'admin' ),
 			[],
-			PRAGMATIC_SCAFFOLD_VERSION
+			AMERICANEAGLE_SCAFFOLD_VERSION
 		);
 	} else {
 		wp_enqueue_style(
-			'pragmatic_scaffold_frontend',
+			'americaneagle_scaffold_frontend',
 			style_url( 'style', 'frontend' ),
 			[],
-			PRAGMATIC_SCAFFOLD_VERSION
+			AMERICANEAGLE_SCAFFOLD_VERSION
 		);
 	}
 
@@ -212,17 +212,17 @@ function styles() {
 function admin_styles() {
 
 	wp_enqueue_style(
-		'pragmatic_scaffold_shared',
+		'americaneagle_scaffold_shared',
 		style_url( 'shared-style', 'shared' ),
 		[],
-		PRAGMATIC_SCAFFOLD_VERSION
+		AMERICANEAGLE_SCAFFOLD_VERSION
 	);
 
 	wp_enqueue_style(
-		'pragmatic_scaffold_admin',
+		'americaneagle_scaffold_admin',
 		style_url( 'admin-style', 'admin' ),
 		[],
-		PRAGMATIC_SCAFFOLD_VERSION
+		AMERICANEAGLE_SCAFFOLD_VERSION
 	);
 
 }
@@ -238,7 +238,7 @@ function mce_css( $stylesheets ) {
 		$stylesheets .= ',';
 	}
 
-	return $stylesheets . PRAGMATIC_SCAFFOLD_URL . ( ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ?
+	return $stylesheets . AMERICANEAGLE_SCAFFOLD_URL . ( ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ?
 			'assets/css/frontend/editor-style.css' :
 			'dist/css/editor-style.min.css' );
 }

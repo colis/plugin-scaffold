@@ -1,10 +1,10 @@
 {
-  "name": "pragmatic/pragmatic-scaffold",
-  "description": "Pragmatic Scaffold",
+  "name": "americaneagle-com/americaneagle-scaffold",
+  "description": "Americaneagle Scaffold",
   "authors": [
     {
-      "name": "Pragmatic",
-      "email": "info@pragmatic.agency"
+      "name": "Americaneagle.com",
+      "email": "info@americaneagle.com"
     }
   ],
   "require": {
@@ -12,7 +12,7 @@
   },
   "autoload": {
     "psr-4": {
-      "PragmaticScaffold\\": "includes/classes/"
+      "AmericaneagleScaffold\\": "includes/classes/"
     }
   },
   "require-dev": {

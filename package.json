@@ -1,11 +1,11 @@
 {
-  "name": "plugin-scaffold",
+  "name": "americaneagle-scaffold",
   "version": "1.0.0",
-  "description": "Pragmatic Plugin Scaffold",
+  "description": "Americaneagle Scaffold",
   "author": {
-    "name": "Pragmatic",
-    "email": "info@pragmatic.agency",
-    "url": "https://pragmatic.agency",
+    "name": "Americaneagle.com",
+    "email": "info@americaneagle.com",
+    "url": "https://www.americaneagle.com/",
     "role": "developer"
   },
   "scripts": {

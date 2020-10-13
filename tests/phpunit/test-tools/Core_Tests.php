@@ -1,5 +1,5 @@
 <?php
-namespace PragmaticScaffold\Core;
+namespace AmericaneagleScaffold\Core;
 
 /**
  * This is a very basic test case to get things started. You should probably rename this and make
@@ -13,7 +13,7 @@ namespace PragmaticScaffold\Core;
  *   - https://github.com/10up/wp_mock
  */
 
-use PragmaticScaffold as Base;
+use AmericaneagleScaffold as Base;
 
 class Core_Tests extends Base\TestCase {
 
@@ -26,9 +26,9 @@ class Core_Tests extends Base\TestCase {
 	 */
 	public function test_setup() {
 		// Setup
-		\WP_Mock::expectActionAdded( 'init', 'PragmaticScaffold\Core\i18n' );
-		\WP_Mock::expectActionAdded( 'init', 'PragmaticScaffold\Core\init' );
-		\WP_Mock::expectAction( 'pragmatic_scaffold_loaded' );
+		\WP_Mock::expectActionAdded( 'init', 'AmericaneagleScaffold\Core\i18n' );
+		\WP_Mock::expectActionAdded( 'init', 'AmericaneagleScaffold\Core\init' );
+		\WP_Mock::expectAction( 'americaneagle_scaffold_loaded' );
 
 		// Act
 		setup();
@@ -47,10 +47,10 @@ class Core_Tests extends Base\TestCase {
 			'args' => array(),
 			'return' => 'en_US',
 		) );
-		\WP_Mock::onFilter( 'plugin_locale' )->with( 'en_US', 'pragmatic-scaffold' )->reply( 'en_US' );
+		\WP_Mock::onFilter( 'plugin_locale' )->with( 'en_US', 'americaneagle-scaffold' )->reply( 'en_US' );
 		\WP_Mock::userFunction( 'load_textdomain', array(
 			'times' => 1,
-			'args' => array( 'pragmatic-scaffold', 'lang_dir/pragmatic-scaffold/pragmatic-scaffold-en_US.mo' ),
+			'args' => array( 'americaneagle-scaffold', 'lang_dir/americaneagle-scaffold/americaneagle-scaffold-en_US.mo' ),
 		) );
 		\WP_Mock::userFunction( 'plugin_basename', array(
 			'times' => 1,
@@ -59,7 +59,7 @@ class Core_Tests extends Base\TestCase {
 		) );
 		\WP_Mock::userFunction( 'load_plugin_textdomain', array(
 			'times' => 1,
-			'args' => array( 'pragmatic-scaffold', false, 'path/languages/' ),
+			'args' => array( 'americaneagle-scaffold', false, 'path/languages/' ),
 		) );
 
 		// Act
@@ -74,7 +74,7 @@ class Core_Tests extends Base\TestCase {
 	 */
 	public function test_init() {
 		// Setup
-		\WP_Mock::expectAction( 'pragmatic_scaffold_init' );
+		\WP_Mock::expectAction( 'americaneagle_scaffold_init' );
 
 		// Act
 		init();
